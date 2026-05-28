@@ -15,5 +15,11 @@ export default defineConfig({
   // Set base path for GitHub Pages (repository deployed at https://<user>.github.io/NATTIE)
   vite: {
     base: "/NATTIE/",
+    // Enable source maps in production build so runtime stack traces map to
+    // original source — useful for debugging hydration/invariant errors.
+    // Remove or disable this after debugging to avoid shipping source maps.
+    build: {
+      sourcemap: true,
+    },
   },
 });
