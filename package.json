@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite dev",
     "build": "vite build --sourcemap",
+    "build:vercel": "npm run build && npx nitro build --preset vercel && node scripts/sync-vercel-output.mjs",
     "build:dev": "vite build --mode development",
     "preview": "vite preview",
     "lint": "eslint .",
