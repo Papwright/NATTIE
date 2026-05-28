@@ -1,12 +1,9 @@
 {
   "builds": [
-    {
-      "src": "package.json",
-      "use": "@vercel/static-build",
-      "config": { "distDir": "dist" }
-    }
+    { "src": "dist/server/server.js", "use": "@vercel/edge" },
+    { "src": "dist/client/**", "use": "@vercel/static" }
   ],
   "routes": [
-    { "src": "/(.*)", "dest": "/index.html" }
+    { "src": "\\/(.*)", "dest": "dist/server/server.js" }
   ]
 }
