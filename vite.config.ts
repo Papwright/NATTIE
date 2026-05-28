@@ -12,4 +12,8 @@ export default defineConfig({
     // nitro/vite builds from this
     server: { entry: "server" },
   },
+  // Set base path for GitHub Pages (repository deployed at https://<user>.github.io/NATTIE)
+  vite: {
+    base: "/NATTIE/",
+  },
 });
